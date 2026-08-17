@@ -24,7 +24,7 @@
             figurinhaAbertura: null,
             configs: {
                 tema: 'claro',
-                figurinhas: false,
+                figurinhas: true,
                 ladosInvertidos: false,
                 controlesEscondidos: false
             }
@@ -95,7 +95,7 @@
                 } else {
                     this.data.configs.tema = localStorage.getItem('tema_placar') || 'claro';
                     const valFig = localStorage.getItem('figurinhas_ativas');
-                    this.data.configs.figurinhas = valFig === null ? false : (valFig === 'true' || valFig === true);
+                    this.data.configs.figurinhas = valFig === null ? true : (valFig === 'true' || valFig === true);
                     this.data.configs.ladosInvertidos = localStorage.getItem('lados_invertidos') === 'true';
                     this.data.configs.controlesEscondidos = localStorage.getItem('controles_topo_escondidos') === 'true';
                 }
